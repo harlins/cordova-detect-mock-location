@@ -1,0 +1,30 @@
+{
+  "name": "cordova-detect-mock-location",
+  "version": "0.1.0",
+  "description": "Plugin for detecting mock GPS locations",
+  "cordova": {
+    "id": "cordova-detect-mock-location",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanya574033/cordova-mock-location-detector-plugin.git"
+  },
+  "keywords": [
+    "cordova",
+    "mock",
+    "location",
+    "detector",
+    "fake",
+    "ionic"
+  ],
+  "author": "tanyakron sujinprum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tanya574033/cordova-mock-location-detector-plugin/issues"
+  },
+  "homepage": "https://github.com/tanya574033/cordova-mock-location-detector-plugin#readme"
+}
