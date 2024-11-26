@@ -20,7 +20,10 @@
 				<param name="android-package" value="com.tanyakron.cordovadetectmocklocation.CordovaDetectMockLocationPlugin" />
 			</feature>
 		</config-file>
-		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		<config-file parent="/*" target="AndroidManifest.xml">
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+		</config-file>
 		<source-file src="src/android/CordovaDetectMockLocationPlugin.java" target-dir="src/com/tanyakron/cordovadetectmocklocation/CordovaDetectMockLocationPlugin" />
 	</platform>
 </plugin>
