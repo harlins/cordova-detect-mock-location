@@ -13,6 +13,16 @@
 			</feature>
 		</config-file>
 		<source-file src="src/ios/CordovaDetectMockLocationPlugin.m" />
+
+		<!-- Usage description of the Location for iOS 6+, mandatory since iOS 10 -->
+        	<preference name="LOCATION_WHENINUSE_USAGE_DESCRIPTION" default="This app want to use location." />
+        	<config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+            		<string>$LOCATION_WHENINUSE_USAGE_DESCRIPTION</string>
+        	</config-file>
+        
+        	<config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+            		<string>$LOCATION_WHENINUSE_USAGE_DESCRIPTION</string>
+        	</config-file>
 	</platform>
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
@@ -23,6 +33,7 @@
 		<config-file parent="/*" target="AndroidManifest.xml">
 			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+			<uses-feature android:name="android.hardware.location.gps" />
 		</config-file>
 		<source-file src="src/android/CordovaDetectMockLocationPlugin.java" target-dir="src/com/tanyakron/cordovadetectmocklocation/CordovaDetectMockLocationPlugin" />
 	</platform>
